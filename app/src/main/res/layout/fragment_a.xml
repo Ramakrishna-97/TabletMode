@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_selector"
+    tools:context=".FragmentA">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Employee Data :"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:textColor="#8BC34A"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="count"
+        android:id="@+id/countno"
+        android:visibility="gone"
+        android:textSize="30dp"
+        android:layout_marginLeft="80dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_selector"
+        android:layout_marginTop="10dp"
+        tools:listitem="@layout/custom_recycler"
+        android:id="@+id/recyclerfragA"/>
+</LinearLayout>
