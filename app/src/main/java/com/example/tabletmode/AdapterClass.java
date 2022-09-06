@@ -1,9 +1,11 @@
 package com.example.tabletmode;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,7 +16,7 @@ import java.util.List;
 
 public class AdapterClass extends RecyclerView.Adapter<AdapterClass.userHolder> {
     List<ModelClass> modelClassList;
-
+    int selectedpostion=-1;
     public AdapterClass(List<ModelClass> modelClassList){
         this.modelClassList=modelClassList;
     }
@@ -31,14 +33,33 @@ public class AdapterClass extends RecyclerView.Adapter<AdapterClass.userHolder> 
         holder.mail.setText("Mail:"+modelClassList.get(position).getMail());
         holder.mobile.setText("Mobile:"+modelClassList.get(position).getMobile());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+//        holder.itemView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//            }
+//        });
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AppCompatActivity activity=(AppCompatActivity)view.getContext();
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragmentB,new FragmentB(modelClassList.get(position).getFname(),modelClassList.get(position).getLname(),modelClassList.get(position).getMail(),modelClassList.get(position).getMobile(),modelClassList.get(position).getDesg(),modelClassList.get(position).getDoj())).addToBackStack(null).commit();
+                selectedpostion=position;
+                notifyDataSetChanged();
 
             }
         });
+        if (selectedpostion==position)
+        {
+            holder.linearLayout.setBackgroundColor(Color.parseColor("#FF03DAC5"));
+        }
+        else
+        {
+            holder.linearLayout.setBackgroundColor(Color.parseColor("#FFFFFF"));
+
+
+        }
+
 
     }
 
@@ -50,12 +71,14 @@ public class AdapterClass extends RecyclerView.Adapter<AdapterClass.userHolder> 
     public class userHolder extends RecyclerView.ViewHolder {
         TextView fname,mail,mobile;
         TextView count;
+        LinearLayout linearLayout;
         public userHolder(@NonNull View itemView) {
             super(itemView);
             fname=itemView.findViewById(R.id.displayname);
             mail=itemView.findViewById(R.id.displayemail);
             mobile=itemView.findViewById(R.id.displaycontact);
-            count=itemView.findViewById(R.id.countno);
+            count=itemView.findViewById(R.id.TotalCount);
+            linearLayout=itemView.findViewById(R.id.Linearlayout11);
         }
     }
 }

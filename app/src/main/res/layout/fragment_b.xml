@@ -5,8 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#1D9C27B0"
-    android:layout_gravity="center_horizontal"
-
     tools:context=".FragmentB">
 
     <!--    <androidx.cardview.widget.CardView-->
@@ -20,154 +18,163 @@
         >
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/bg_colour"
-            android:layout_gravity="center"
-            >
+            android:layout_height="match_parent"
+            android:orientation="vertical">
             <!-- TODO: Update blank fragment layout -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Employee Information"
                 android:textSize="30sp"
-                android:textStyle="bold"
-                android:textColor="#E91E63"
                 android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#00BCD4"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 />
 
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_margin="10dp"
-                android:weightSum="2"
+                android:weightSum="2">
 
-                android:layout_gravity="center_horizontal">
-                <TextView
-                    android:layout_width="0dp"
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
+                    android:orientation="vertical"
                     android:layout_margin="10dp"
-                    android:hint="Firstname"
-                    android:textSize="15sp"/>
-                <TextView
-                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="3"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_margin="10dp"
+                        android:text="Firstname"
+                        android:textSize="15sp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/fnamedispid"
+                        android:layout_weight="0.5"
+                        android:layout_margin="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:background="#E8E3E3"
+                        android:textSize="15sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Name"
+                        android:layout_weight="0.5"
+                        android:layout_margin="10dp"
+                        android:textSize="15sp"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_margin="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:id="@+id/lnamedispid"
+                        android:background="#E8E3E3"
+                        android:textSize="15sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Designation"
+                        android:layout_weight="0.5"
+                        android:layout_margin="10dp"
+                        android:textSize="15sp"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_margin="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:id="@+id/desgdispid"
+                        android:background="#E8E3E3"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/fnamedispid"
-                    android:layout_weight="0.5"
+                    android:orientation="vertical"
                     android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:weightSum="2"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_margin="10dp"
+                        android:text="Mail"
+                        android:textSize="15sp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/maildispid"
+                        android:layout_weight="0.5"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:background="#E8E3E3"
+                        android:layout_margin="10dp"
+                        android:textSize="15sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mobile"
+                        android:layout_weight="0.5"
+                        android:layout_margin="10dp"
+                        android:textSize="15sp"/>
 
-                    android:textSize="15sp"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:hint="Last Name"
-                    android:layout_weight="0.5"
-                    android:layout_margin="10dp"
 
-                    android:textSize="15sp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:id="@+id/mobiledispid"
+                        android:background="#E8E3E3"
+                        android:textSize="15sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date of Joining"
+                        android:layout_weight="0.5"
+                        android:layout_margin="10dp"
+                        android:textSize="15sp"/>
 
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:id="@+id/dojdispid"
+                        android:background="#E8E3E3"
+                        android:textSize="15sp"/>
 
-                    android:layout_weight="0.5"
-                    android:layout_margin="10dp"
-                    android:id="@+id/lnamedispid"
-                    android:textSize="15sp"/>
+                </LinearLayout>
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="10dp"
-                android:weightSum="2"
-                android:layout_gravity="center_horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
 
-                    android:layout_weight="0.5"
-                    android:layout_margin="10dp"
-                    android:hint="Mail"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/maildispid"
-                    android:layout_weight="0.5"
-                    android:layout_margin="10dp"
-
-
-                    android:textSize="20sp"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:hint="Mobile"
-                    android:layout_weight="0.5"
-                    android:layout_margin="10dp"
-
-                    android:textSize="20sp"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-
-                    android:layout_weight="0.5"
-                    android:layout_margin="10dp"
-                    android:id="@+id/mobiledispid"
-                    android:textSize="15sp"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="10dp"
-                android:weightSum="2"
-                android:layout_gravity="center_horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-
-                    android:layout_weight="0.5"
-                    android:layout_margin="10dp"
-                    android:hint="Designation"
-
-                    android:textSize="15sp"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/desgdispid"
-                    android:layout_weight="0.5"
-                    android:layout_margin="10dp"
-
-
-                    android:textSize="15sp"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:hint="Date of Joining"
-                    android:layout_weight="0.5"
-                    android:layout_margin="10dp"
-
-                    android:textSize="15sp"/>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-
-                    android:layout_weight="0.5"
-                    android:layout_margin="10dp"
-                    android:id="@+id/dojdispid"
-                    android:textSize="15sp"/>
-
-            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </androidx.cardview.widget.CardView>

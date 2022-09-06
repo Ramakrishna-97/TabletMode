@@ -10,13 +10,13 @@
     >
 
     <LinearLayout
+        android:id="@+id/Linearlayout11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="3dp"
-
         android:orientation="vertical"
         android:padding="10dp"
-        android:background="#DCD6D6"
+        android:background="#B28BC34A"
         >
 
         <TextView
@@ -26,7 +26,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:text="User Name"
-            android:textColor="@color/purple_700"/>
+            android:textColor="#F44336"/>
 
         <TextView
             android:layout_width="300dp"
@@ -34,6 +34,7 @@
             android:id="@+id/displaycontact"
             android:textSize="18sp"
             android:text="User Mobile"
+            android:textColor="@color/black"
             android:layout_marginTop="3dp"
             />
 
@@ -43,6 +44,7 @@
             android:id="@+id/displayemail"
             android:textSize="18sp"
             android:text="User Email"
+            android:textColor="@color/black"
             android:layout_marginTop="3dp"
             />
 
